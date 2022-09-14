@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    grid-template: 2 / 2;
+}
+
+.dice{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.dice aside{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #000;
+}
+
+.dice aside:nth-child(1){ grid-area: a;}
+.dice aside:nth-child(2){ grid-area: b;}
+.dice aside:nth-child(3){ grid-area: c;}
+.dice aside:nth-child(4){ grid-area: d;}
+.dice aside:nth-child(5){ grid-area: e;}
+.dice aside:nth-child(6){ grid-area: f;}
+
+.dice.dots-1{ 
+    grid-template-areas: ". . . . ."
+                         ". . . . ."
+                         ". . a . ."
+                         ". . . . ."
+                         ". . . . .";
+}
+.dice.dots-1 aside:nth-child(n+2){ display: none;}
+
+.dice.dots-2{ 
+    grid-template-areas: ". . . . ."
+                         ". a . . ."
+                         ". . . . ."
+                         ". . . b ."
+                         ". . . . .";
+}
+.dice.dots-2 aside:nth-child(n+3){ display: none;}
+
+.dice.dots-3{ 
+    grid-template-areas: ". . . . ."
+                         ". a . . ."
+                         ". . b . ."
+                         ". . . c ."
+                         ". . . . .";
+}
+.dice.dots-3 aside:nth-child(n+4){ display: none;}
+
+.dice.dots-4{ 
+    grid-template-areas: ". . . . ."
+                         ". a . c ."
+                         ". . . . ."
+                         ". b . d ."
+                         ". . . . .";
+}
+.dice.dots-4 aside:nth-child(n+5){ display: none;}
+
+.dice.dots-5{ 
+    grid-template-areas: ". . . . ."
+                         ". a . c ."
+                         ". . e . ."
+                         ". b . d ."
+                         ". . . . .";
+}
+.dice.dots-5 aside:nth-child(n+6){ display: none;}
+
+.dice.dots-6{ 
+    grid-template-areas: ". . . . ."
+                         ". a . d ."
+                         ". b . e ."
+                         ". c . f ."
+                         ". . . . .";
+    gap: 5px;
+}
+.dice.dots-6 aside:nth-child(n+7){ display: none;}
