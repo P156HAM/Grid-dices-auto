@@ -40,7 +40,6 @@
                          ". . . . ."
                          ". . . . .";
 }
-.dice.dots-1 aside:nth-child(n+2){ display: none;}
 
 .dice.dots-2{ 
     grid-template-areas: ". . . . ."
@@ -49,7 +48,6 @@
                          ". . . b ."
                          ". . . . .";
 }
-.dice.dots-2 aside:nth-child(n+3){ display: none;}
 
 .dice.dots-3{ 
     grid-template-areas: ". . . . ."
@@ -58,7 +56,6 @@
                          ". . . c ."
                          ". . . . .";
 }
-.dice.dots-3 aside:nth-child(n+4){ display: none;}
 
 .dice.dots-4{ 
     grid-template-areas: ". . . . ."
@@ -67,7 +64,6 @@
                          ". b . d ."
                          ". . . . .";
 }
-.dice.dots-4 aside:nth-child(n+5){ display: none;}
 
 .dice.dots-5{ 
     grid-template-areas: ". . . . ."
@@ -76,7 +72,6 @@
                          ". b . d ."
                          ". . . . .";
 }
-.dice.dots-5 aside:nth-child(n+6){ display: none;}
 
 .dice.dots-6{ 
     grid-template-areas: ". . . . ."
@@ -86,4 +81,7 @@
                          ". . . . .";
     gap: 5px;
 }
-.dice.dots-6 aside:nth-child(n+7){ display: none;}
+
+.dice.dots-1 aside:nth-child(n+2), .dice.dots-2 aside:nth-child(n+3),
+.dice.dots-3 aside:nth-child(n+4), .dice.dots-4 aside:nth-child(n+5),
+.dice.dots-5 aside:nth-child(n+6), .dice.dots-6 aside:nth-child(n+7){ display: none;}
